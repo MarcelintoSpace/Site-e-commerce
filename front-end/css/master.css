@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+.jumbotron {
+  height: 500px;
+}
+
+.big-banner {
+  background-image: url(../images/presentation_boutique.jpg);
+  background-size: 100%;
+  opacity: 0.5;
+}
