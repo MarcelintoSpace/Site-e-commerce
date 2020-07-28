@@ -1,0 +1,22 @@
+{
+  "name": "p5_oricono",
+  "version": "1.0.0",
+  "description": "This is the back end server for Project 5 of the Junior Web Developer path.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcelintoSpace/P5_Oricono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcelintoSpace/P5_Oricono/issues"
+  },
+  "homepage": "https://github.com/MarcelintoSpace/P5_Oricono#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}

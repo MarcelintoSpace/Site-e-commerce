@@ -1,18 +1,24 @@
-* {
+body {
   margin: 0px;
   padding: 0px;
 }
 
-.bg-dark {
-  background-color: black !important;
-}
-
-.jumbotron {
-  height: 500px;
-}
-
 .big-banner {
-  background-image: url(../images/presentation_boutique.jpg);
-  background-size: 100%;
-  opacity: 0.5;
+  background-image: url(../images/presentation_boutique_md.jpg);
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: indianred !important;
+}
+
+.card {
+  height: 400px;
+  width: 200px;
 }
