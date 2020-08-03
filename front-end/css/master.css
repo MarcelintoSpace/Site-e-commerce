@@ -6,14 +6,29 @@ html, body {
 .container {
 margin-top: 60px;
 width: 100%;
-vertical-align: middle;
 }
 
 .col-md-6 {
 margin-left: 15%;
 }
 
+.col-lg-12 {
+  vertical-align: middle;
+  margin-left: 33%;
+}
+
 .col-md-4{
+margin-left: 5%;
+display: flex;
+}
+
+.col-lg-4 {
+margin-left: 5%!important;
+display: flex;
+}
+
+
+.col-xs-4 {
 margin-left: 5%;
 }
 
@@ -58,4 +73,24 @@ footer {
 
 a:hover {
   color: white!important;
+}
+
+.img-thumbnail {
+  width: 150px;
+  height: 150px;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 300px;
+  text-align: center;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h5 {
+  display: flex;
 }
