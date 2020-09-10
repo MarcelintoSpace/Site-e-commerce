@@ -10,12 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/MarcelintoSpace/P5_Oricono.git"
   },
-  "author": "",
+  "author": "Benjamin Nedelec",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MarcelintoSpace/P5_Oricono/issues"
   },
-  "homepage": "https://github.com/MarcelintoSpace/P5_Oricono#readme",
+  "homepage": "https://marcelintospace.github.io/P5_Oricono",
   "dependencies": {
     "bootstrap": "^4.5.0"
   }

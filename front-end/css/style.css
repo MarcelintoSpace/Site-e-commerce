@@ -1,0 +1,239 @@
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* popup  */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #fff;
+  color: #555;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* fermer et ouvrir le popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* ajout d'animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+
+/*
+ * Carousel
+ */
+.first-slide {
+  width: 100%;
+}
+
+.second-slide {
+  width: 100%;
+}
+
+.third-slide {
+  width: 100%;
+}
+
+/*
+ * Articles
+ */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #00005;
+  justify-content: center;
+}
+
+.img-container {
+  width: 310px;
+  height: 200px;
+  text-align: center;
+}
+
+.flex-container>div {
+  background-color: white;
+  color: black;
+  width: 310px;
+  margin: 10%;
+  text-align: center;
+  line-height: normal;
+}
+
+.teddy {
+  box-shadow: 15px 15px 6px -6px #777;
+  vertical-align: middle;
+}
+
+.teddy:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  text-align: stretch;
+}
+
+.tedProduit {
+  box-shadow: 15px 15px 6px -6px #777;
+  vertical-align: middle;
+}
+
+.tedProduit:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+ * Footer
+ */
+footer {
+  padding: 30px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.company-links ul {
+  list-style: none;
+  text-align: left;
+}
+
+.paiement-links i {
+  color: lightgray;
+  margin: 0 5px;
+}
+
+.add-to-cart {
+  border: 0;
+  line-height: 4.5;
+  padding: 10px;
+  background-color: purple;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .6);
+}
+
+a span {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.dropdown:hover>#cart-dropdown {
+  display: block;
+}
+
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  .cover-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
