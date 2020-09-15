@@ -23,9 +23,10 @@ html,
 body {
   height: 100%;
   background-color: #333;
+
 }
 
-body {
+.card {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
@@ -218,8 +219,32 @@ a span {
   font-size: 18px;
 }
 
-.dropdown:hover>#cart-dropdown {
-  display: block;
+.img-responsive .centree {
+ margin: 0 auto;
+}
+
+.messageErreur {
+  margin-top: 20px;
+}
+
+.btnSubmit {
+  width: 300px;
+  height: 40px;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.btnSubmit:hover {
+  background-color: transparent;
+  color: #fff;
+  font-size: 22px;
+  transition: 0.3s ease-in-out;
+}
+
+.copy {
+  text-align: center;
+  color: #fff;
 }
 
 /*

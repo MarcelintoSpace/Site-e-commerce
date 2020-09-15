@@ -32,6 +32,7 @@ request({
                         <h4>${ted.description}</h4> </br>
                         <h3>${ted.price/100 + "€"}</h3></br>
 <a id="myBtn" class="add-to-cart" href = 'produit.html?id=${ted._id}'><span>Plus d'infos !</span></a></br>
+<button type="button" class="add-to-cart" onclick="window.location.href = 'produit.html?id=${ted._id}?img=${ted.imageUrl}?name=${ted.name}?description=${ted.description}?price=${ted.price/100 + "€"}';">Ajouter au panier</button>
                 </div> </br>`;
                   });
     document.getElementsByClassName("flex-container")[0].innerHTML = html;
@@ -39,5 +40,3 @@ request({
   .catch(error => {
     console.log(error);
   });
-
-// récupération des produits
