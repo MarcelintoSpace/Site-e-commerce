@@ -5,7 +5,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* Custom default button */
+/* personalisation du bouton */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -23,7 +23,15 @@ html,
 body {
   height: 100%;
   background-color: #333;
+  color: white;
+}
 
+h4 {
+  padding: 5px;
+}
+
+.navbar-img {
+  margin-top: 3rem;
 }
 
 .card {
@@ -44,46 +52,6 @@ body {
 
 ul {
   list-style-type: none;
-}
-
-/* popup  */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #fff;
-  color: #555;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* fermer et ouvrir le popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
 }
 
 /* ajout d'animation */
@@ -181,6 +149,40 @@ hr {
   transition: all 0.3s ease-in-out;
 }
 
+#tedArticle {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #00005;
+  justify-content: center;
+}
+
+#tedArticle>div {
+  background-color: white;
+  color: black;
+  width: 400px;
+  margin: 10%;
+  padding: 5px;
+  text-align: center;
+  line-height: normal;
+}
+
+table {
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#messPanier {
+  text-align: center;
+  font-size: 24px;
+}
+
+.ssTotal {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
 /*
  * Footer
  */
@@ -195,11 +197,12 @@ footer {
 .company-links ul {
   list-style: none;
   text-align: left;
+  margin-right: 10px;
 }
 
 .paiement-links i {
   color: lightgray;
-  margin: 0 5px;
+  margin-left: 10px;
 }
 
 .add-to-cart {
@@ -220,7 +223,7 @@ a span {
 }
 
 .img-responsive .centree {
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 .messageErreur {
@@ -233,10 +236,11 @@ a span {
   align-items: center;
   border-radius: 5px;
   font-size: 18px;
+  background-color: purple;
 }
 
 .btnSubmit:hover {
-  background-color: transparent;
+  background-color: purple;
   color: #fff;
   font-size: 22px;
   transition: 0.3s ease-in-out;

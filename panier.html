@@ -53,7 +53,7 @@
       <div class="bg-dark">
         <div class="container-fluid">
           <div class="row">
-            <nav class="col navbar navbar-expand-lg navbar-dark">
+            <nav class="col navbar navbar-img navbar-expand-lg navbar-dark">
               <a class="nav-brand" href="index.html"><img src="front-end/images/logo.png" width="320" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
               <div id="navbarContent" class="collapse navbar-collapse">
               </div>
@@ -64,106 +64,104 @@
     <!--corp du site -->
 
     <!-- produits -->
-    <table class="table">
+    <table id="cart" style="visibility:hidden; width:100%">
       <thead>
         <tr>
           <th scope="col">Article</th>
           <th scope="col">Prix</th>
           <th scope="col">Quantité</th>
           <th scope="col">Couleur</th>
+          <th></th>
         </tr>
       </thead>
-      <tbody id="XXXXXXXXX">
-        <div class="XXXXXXXXX">
-        </div>
+      <tbody id="cartBody">
       </tbody>
     </table>
+      <div class="ssTotal">
+        <p>Sous total : <span class="subtotal"></span>€</p>
+      </div>
+      <p id="messPanier"> </p>
+      <div>
+        <hr>
+      </div>
+      <!-- formulaire -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1-12">
 
-    <p>Sous total : <span class="subtotal"></span>€</p>
 
-    <div>
+            <form id="formulaire" name="formulaire" action="confirmation.html" method="post">
+              <label for="formGroupInput"></label><br>
+              <input type="text" name="nom" placeholder="Nom" class="form-control">
+              <br>
+              <label for="formGroupInput2"></label><br>
+              <input type="text" name="prenom" placeholder="Prénom" class="form-control">
+              <br>
+              <label for="formGroupInput3"></label><br>
+              <input type="text" name="adresse" placeholder="Adresse" class="form-control">
+              <br>
+              <label for="formGroupInput4"></label><br>
+              <input type="text" name="cp" placeholder="Code postal" class="form-control" pattern="[0-9]{5}">
+              <br>
+              <label for="formGroupInput5"></label><br>
+              <input type="text" name="ville" placeholder="Ville" class="form-control">
+              <br>
+              <label for="formGroupInput6"></label><br>
+              <input type="email" name="email" placeholder="Adresse email" class="form-control">
+              <br>
+              <input class="btnSubmit center-block" type="submit" value="Confirmer ma commande">
+            </form>
+
+          </div>
+          <div class="messageErreur">
+            <!-- message d'erreur -->
+            <p style="color: red;" id="erreur"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Bas de page -->
       <hr>
-    </div>
-    <!-- formulaire -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1-12">
-
-
-          <form name="formulaire" action="confirmation.html" method="post">
-            <label for="formGroupInput">Votre Nom</label><br>
-            <input type="text" name="nom" placeholder="Nom" class="form-control">
-            <br>
-            <label for="formGroupInput2">Votre Prénom</label><br>
-            <input type="text" name="prenom" placeholder="Prénom" class="form-control">
-            <br>
-            <label for="formGroupInput3">Votre Adresse</label><br>
-            <input type="text" name="adresse" placeholder="Adresse" class="form-control">
-            <br>
-            <label for="formGroupInput4">Votre Code postal</label><br>
-            <input type="text" name="cp" placeholder="Code postal" class="form-control" pattern="[0-9]{5}">
-            <br>
-            <label for="formGroupInput5">Votre Ville</label><br>
-            <input type="text" name="ville" placeholder="Ville" class="form-control">
-            <br>
-            <label for="formGroupInput6">Votre Email</label><br>
-            <input type="email" name="email" placeholder="Adresse email" class="form-control">
-            <br>
-            <input class="btnSubmit center-block" type="submit" value="Confirmer ma commande">
-          </form>
-
+      <!-- Footer -->
+      <footer class="bg-dark">
+        <div class="company-links">
+          <h4 class="text-white">ORINOCO</h4>
+          <ul class="text-white">
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Etre Affilié</a></li>
+            <li><a href="mailto:benjamin@orinoco.com?subject=feedback">Contacts</a></li>
+            <li><a href="#">Aide</a></li>
+          </ul>
         </div>
-        <div class="messageErreur">
-          <!-- message d'erreur -->
-          <p style="color: red;" id="erreur"></p>
+        <div class="paiement-links">
+          <h4 class="text-white">PAIEMENT</h4>
+          <i class="fab fa-cc-apple-pay fa-3x"></i>
+          <i class="fab fa-cc-mastercard fa-3x"></i>
+          <i class="fab fa-cc-paypal fa-3x"></i>
+          <i class="fab fa-cc-stripe fa-3x"></i>
+          <i class="fab fa-cc-visa fa-3x"></i>
         </div>
-      </div>
-    </div>
-    <!-- Bas de page -->
-    <hr>
-    <!-- Footer -->
-    <footer class="bg-dark">
-      <div class="company-links">
-        <h4 class="text-white">ORINOCO</h4>
-        <ul class="text-white">
-          <li><a href="#">Mentions Légales</a></li>
-          <li><a href="#">Etre Affilié</a></li>
-          <li><a href="mailto:benjamin@orinoco.com?subject=feedback">Contacts</a></li>
-          <li><a href="#">Aide</a></li>
-        </ul>
-      </div>
-      <div class="paiement-links">
-        <h4 class="text-white">PAIEMENT</h4>
-        <i class="fab fa-cc-apple-pay fa-3x"></i>
-        <i class="fab fa-cc-mastercard fa-3x"></i>
-        <i class="fab fa-cc-paypal fa-3x"></i>
-        <i class="fab fa-cc-stripe fa-3x"></i>
-        <i class="fab fa-cc-visa fa-3x"></i>
-      </div>
-    </footer>
-    <!-- Footer -->
+      </footer>
+      <!-- Footer -->
 
-    <!-- Coppyright -->
-    <div class="copy">
-      <h5>Site fait avec ❤️ par <a href="http://benniget.com">Benniget</a></h5>
-    </div>
+      <!-- Coppyright -->
+      <div class="copy">
+        <h5>Site fait avec ❤️ par <a href="http://benniget.com">Benniget</a></h5>
+      </div>
 
-    <!-- Bootstrap core JavaScript
+      <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery || document.write('<script src="front-end/js/jquery-3.3.1.min.js"><\/script>')
-    </script>
-    <script src="front-end/js/bootstrap.min.js"></script>
-    <script src="front-end/js/bootstrap.js"></script>
-    <script src="front-end/js/popper.min.js" charset="utf-8"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="front-end/js/ie10-viewport.js"></script>
-    <!-- JS api -->
-    <script src="front-end/js/ajax.js" charset="utf-8"></script>
-    <!-- JS cart -->
-    <script src="front-end/js/cart.js" charset="utf-8"></script>
-    <!-- JS Formulaire -->
-    <script src="front-end/js/formulaire.js" charset="utf-8"></script>
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+      <script>
+        window.jQuery || document.write('<script src="front-end/js/jquery-3.3.1.min.js"><\/script>')
+      </script>
+      <script src="front-end/js/bootstrap.min.js"></script>
+      <script src="front-end/js/bootstrap.js"></script>
+      <script src="front-end/js/popper.min.js" charset="utf-8"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="front-end/js/ie10-viewport.js"></script>
+      <!-- JS cart -->
+      <script src="front-end/js/panier.js" charset="utf-8"></script>
+      <!-- JS Formulaire -->
+      <script src="front-end/js/formulaire.js" charset="utf-8"></script>
   </body>
