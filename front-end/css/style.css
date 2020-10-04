@@ -1,24 +1,4 @@
-a,
-a:focus,
-a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* personalisation du bouton */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-/*
- * Base structure
- */
+/* Base structure HTML */
 html,
 body {
   height: 100%;
@@ -28,51 +8,6 @@ body {
 
 h4 {
   padding: 5px;
-}
-
-.navbar-img {
-  margin-top: 3rem;
-}
-
-.card {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-}
-
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-/* ajout d'animation */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 hr {
@@ -87,9 +22,19 @@ hr {
   margin: 18px 0;
 }
 
-/*
- * Carousel
- */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Barre de navigation */
+.navbar-img {
+  margin-top: 3rem;
+}
+
+/* Carousel */
 .first-slide {
   width: 100%;
 }
@@ -102,13 +47,17 @@ hr {
   width: 100%;
 }
 
-/*
- * Articles
- */
+/* Corp du texte */
+.card {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+/* Articles */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #00005;
   justify-content: center;
 }
 
@@ -121,8 +70,9 @@ hr {
 .flex-container>div {
   background-color: white;
   color: black;
-  width: 310px;
+  width: 320px;
   margin: 10%;
+  padding: 5px;
   text-align: center;
   line-height: normal;
 }
@@ -134,10 +84,6 @@ hr {
 
 .teddy:hover {
   transition: all 0.3s ease-in-out;
-}
-
-.card {
-  text-align: stretch;
 }
 
 .tedProduit {
@@ -152,71 +98,109 @@ hr {
 #tedArticle {
   display: flex;
   flex-wrap: wrap;
-  background-color: #00005;
   justify-content: center;
 }
 
 #tedArticle>div {
   background-color: white;
   color: black;
-  width: 400px;
+  width: 320px;
   margin: 10%;
   padding: 5px;
   text-align: center;
   line-height: normal;
 }
 
-table {
-  margin-top: 50px;
-  margin-left: 20px;
-  text-align: center;
+.inner {
+  padding: 30px;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* Panier */
 #messPanier {
   text-align: center;
   font-size: 24px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.ssTotal {
+#ssTotal {
   text-align: right;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-/*
- * Footer
- */
-footer {
-  padding: 30px;
-  display: flex;
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* tableau panier */
+table {
   margin-top: 50px;
-  justify-content: space-between;
-  font-size: 18px;
-}
-
-.company-links ul {
-  list-style: none;
+  margin-left: 20px;
   text-align: left;
-  margin-right: 10px;
 }
 
-.paiement-links i {
-  color: lightgray;
-  margin-left: 10px;
+td button {
+  font-size: 14px;
+  color: black;
+  background: transparent;
+  border: none !important;
+}
+
+button i {
+  color: white;
+}
+
+th {
+  font-size: 20px;
+}
+td {
+  padding-top: 5px;
+}
+
+/* personalisation du bouton */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 .add-to-cart {
+  border: solid;
+  border-color: purple;
+  line-height: 4.5;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.add-to-prod {
   border: 0;
   line-height: 4.5;
   padding: 10px;
   background-color: purple;
   text-decoration: none;
   margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .6);
+  border-radius: 5px;
 }
 
-a span {
+a.add-to-cart {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a.add-to-prod {
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -251,13 +235,51 @@ a span {
   color: #fff;
 }
 
-/*
- * Affix and center
- */
+/* Footer */
+footer {
+  padding: 30px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.company-links ul {
+  list-style: none;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.paiement-links i {
+  color: lightgray;
+  margin-left: 10px;
+}
+
+/* ajout d'animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Affichage responsive */
 @media (min-width: 768px) {
   .cover-container {
     width: 100%;
-    /* Must be percentage or pixels for horizontal alignment */
   }
 }
 

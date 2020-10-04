@@ -8,7 +8,7 @@ let request = obj => {
         xhr.setRequestHeader(key, obj.headers[key]);
       });
     }
-    
+
 // vérification de la réponse de l'API
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) {

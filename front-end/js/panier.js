@@ -9,20 +9,10 @@ var panier = [];
            var price = $("#price").val();
            var name = $("#name").text();
            var color = $("#colors option:selected").text();
-           var qty = $("#qty").val();
 
-// mise a jour des quantités
-           for (var i in panier) {
-               if(panier[i].Product == name)
-               {
-                   panier[i].Qty = qty;
-                   showCart();
-                   saveCart();
-                   return;
-               }
-           }
+
 // création de l'object javascript
-           var item = { Product: name,  Price: price, Qty: qty, Color: colors };
+           var item = { Product: name,  Price: price, Color: colors };
            panier.push(item);
            saveCart();
            showCart();
@@ -30,7 +20,7 @@ var panier = [];
 
 // supprimer un article
        function deleteItem(index){
-           cart.splice(index,1);
+           panier.splice(index,1);
            showCart();
            saveCart();
        }
@@ -46,6 +36,7 @@ var panier = [];
        function showCart() {
            if (panier.length == 0) {
                $("#cart").css("display", "none");
+               $('#ssTotal').css("display", "none");
                $('#messPanier').html("Votre panier est vide");
                $('#formulaire').css("display", "none");
             return;
@@ -56,10 +47,17 @@ var panier = [];
            for (var i in panier) {
              console.log(i, panier);
                var item = panier[i];
-               var row = "<tr><td>" + item.name + "</td><td>" +
-                            item.price + "</td><td>" + item.color + "</td><td>" + item.Qty + "</td><td>"
-                            + item.Qty * item.price + "</td><td>"
-                            + "<button onclick='deleteItem(" + i + ")'>Delete</button></td></tr>";
+               var row = "<tr><td>" + item.name + "</td><td>" + item.color + "</td><td class='price'>" +
+                            item.price + "</td><td>"
+                            + "<button onclick='deleteItem(" + i + ")'><span><i class='far fa-trash-alt fa-lg'></i></span></button></td></tr>";
+
                $("#cartBody").append(row);
            }
        }
+
+// calcul Total
+var sum = 0;
+$('.price').each(function() {
+    sum += parseFloat($(this).text());
+});
+$('#subTotal').html(sum);
