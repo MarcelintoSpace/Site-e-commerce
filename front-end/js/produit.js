@@ -3,21 +3,21 @@ let params = new URLSearchParams(document.location.search);
 let idProduit = params.get("id");
 
 // appel des données
-  var request = new XMLHttpRequest();
-    request.open('GET', 'http://localhost:3000/api/teddies/' + idProduit);
+var request = new XMLHttpRequest();
+request.open('GET', 'http://localhost:3000/api/teddies/' + idProduit);
 
 //mise en forme des données
-  request.onload = function() {
-    var ted = JSON.parse(request.response);
+request.onload = function() {
+  var ted = JSON.parse(request.response);
 
-// sélection des couleurs
+  // sélection des couleurs
   let select = "<select id='couleur'>";
   ted.colors.forEach((item, i) => {
     select += "<option>" + item + "</option>";
-    });
-    select += "</select>";
+  });
+  select += "</select>";
 
-//insertion du script dans le HTML
+  //insertion du script dans le HTML
   document.getElementById("tedArticle").innerHTML += `
                 <div id="teddy">
                 <div class="articleIMG">
@@ -31,7 +31,7 @@ let idProduit = params.get("id");
                 <a id="btnProduct" class="add-to-prod" href = 'produit.html?id=${ted._id}'><span> Commander </span></a></br>
                 </div> </div></br>`;
 
-//mise en place du LocalStorage
+  //mise en place du LocalStorage
   document.getElementById("btnProduct").addEventListener("click", e => {
     e.preventDefault();
     let couleurId = document.getElementById("couleur");
