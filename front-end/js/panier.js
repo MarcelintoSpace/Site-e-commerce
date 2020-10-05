@@ -48,38 +48,43 @@ function showCart() {
 
   $("#cart").css("visibility", "visible");
   $("#cartBody").empty();
+    let sumSubTotal = 0;
+    let productid = [];
   for (var i in panier) {
     console.log(i, panier);
     var item = panier[i];
-    var row = "<tr><td>" + item.name + "</td><td>" + item.color + "</td><td class='price'>" +
-      item.price + "</td><td>" +
+    var row = "<tr><td>" + item.name + "</td><td>" + item.color + "</td><td id='price'>" +
+      item.price + "€</td><td>" +
       "<button onclick='deleteItem(" + i + ")'><span><i class='far fa-trash-alt fa-lg'></i></span></button></td></tr>";
-
     $("#cartBody").append(row);
+    sumSubTotal = sumSubTotal + item.price;
+    productid.push(item.id);
   }
-}
+  $('#subTotal').html("Votre panier est de " + sumSubTotal + " €");
 
-// calcul Total du panier
-var table = $('#cart'),
-  sumSubTotal = 0;
-
-for (var i = 1; i < table.rows.length; i++) {
-  sumSubTotal = sumSubTotal + parseInt(table.rows[i].cells[2].innerHTML);
-}
-
-$('#subTotal').html("Votre panier est de " + sumSubTotal + " €");
-
-// envoi des données à l'api
 
 // le formulaire et le panier
 var form = document.querySelector("form");
 form.addEventListener("submit", function(e) {
   e.preventDefault();
-  var data = new FormData(form);
-  ajaxPost("http://localhost:3000/api/teddies", data, function(reponse) {
+  let data = {
+    contact:{
+      firstName:$('#firstname').val(),
+      lastName:$('#lastname').val(),
+      address:$('#adresse').val(),
+      city:$('#ville').val(),
+      email:$('#email').val()
+    },
+    products:productid
+
+  };
+    request({
+    url:"http://localhost:3000/api/teddies/order",
+    method:"POST",
+    body:JSON.stringify(data)
+  }).then(function (reponse){
+    //****localStorage***
     window.location.href = 'confirmation.html';
-    var messageElt = document.createElement("p");
-    messageElt.textContent = "Votre commande est bien confirmée";
-    $('#confirmation').appendChild(messageElt);
   });
 });
+}
