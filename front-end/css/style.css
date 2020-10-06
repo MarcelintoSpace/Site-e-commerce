@@ -29,6 +29,11 @@ a:hover {
   text-decoration: none;
 }
 
+a.btn-danger {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 /* Barre de navigation */
 .navbar-img {
   margin-top: 3rem;

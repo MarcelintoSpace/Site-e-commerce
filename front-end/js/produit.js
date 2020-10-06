@@ -45,7 +45,7 @@ request.onload = function() {
     let panier = JSON.parse(localStorage.getItem('panier')) ?? [];
     panier.push(article);
     window.localStorage.setItem('panier', JSON.stringify(panier));
-    alert("L'article est ajouté à votre panier")
+    alert("L'article a bien été ajouté à votre panier")
   })
 
 };
