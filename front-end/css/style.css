@@ -35,9 +35,14 @@ a.btn-danger {
 }
 
 /* Barre de navigation */
-.navbar-img {
-  margin-top: 3rem;
+a.nav-link {
+font-size: 20px; 
 }
+
+.img-responsive {
+    margin-top: 30px;
+  }
+
 
 /* Carousel */
 .first-slide {
@@ -163,8 +168,14 @@ button i {
 th {
   font-size: 20px;
 }
+
 td {
   padding-top: 5px;
+}
+
+/* formulaire */
+.form-group {
+  margin-left: 15px;
 }
 
 /* personalisation du bouton */
@@ -235,7 +246,7 @@ a.add-to-cart {
 
 /* Footer */
 footer {
-  padding: 30px;
+  padding: 10px;
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
@@ -245,12 +256,19 @@ footer {
 .company-links ul {
   list-style: none;
   text-align: left;
-  margin-right: 10px;
+}
+
+.paiement-links {
+  margin-left: 20px;
 }
 
 .paiement-links i {
   color: lightgray;
   margin-left: 10px;
+}
+
+ul.text-white {
+  padding-left: 10px;
 }
 
 /* ajout d'animation */
@@ -278,6 +296,14 @@ footer {
 @media (min-width: 768px) {
   .cover-container {
     width: 100%;
+  }
+
+  #navbarContent {
+    float: inherit;
+  }
+
+  .navbar-nav>li {
+      float: right;
   }
 }
 

@@ -42,7 +42,7 @@ function showCart() {
     $("#cart").css("display", "none");
     $('#ssTotal').css("display", "none");
     $('#messPanier').html("Votre panier est vide");
-    $('#formulaire').css("display", "none");
+    $('.formulaire').css("display", "none");
     return;
   }
 
@@ -65,7 +65,7 @@ function showCart() {
 
 // le formulaire et le panier
 var form = document.querySelector("form");
-form.addEventListener("submit", function(e) {
+$('form').on("submit", function(e) {
   e.preventDefault();
   let data = {
     contact:{
@@ -84,7 +84,9 @@ form.addEventListener("submit", function(e) {
     headers: {'Content-Type': 'application/json'},
     body:JSON.stringify(data)
   }).then(function (reponse){
-    *****localStorage*****
+    let commande = JSON.parse(localStorage.getItem('orderId')) ?? [];
+    commande.push(data);
+    window.localStorage.setItem('orderId', JSON.stringify(commande));
     window.location.href = 'confirmation.html';
   });
 });

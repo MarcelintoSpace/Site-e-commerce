@@ -1,6 +1,13 @@
 //****page confirmation****
 
 //localStorage getItem
-var messageElt = document.createElement("p");
-messageElt.textContent = "Votre commande est bien confirmée";
-$('#confirmation').appendChild(messageElt);
+var order_id = [];
+$(function() {
+  commande = JSON.parse(localStorage.getItem('orderId')) ?? [];
+});
+
+$('#clear').onclick = clear_me;
+
+function clear_me() {
+    localStorage.clear();
+}

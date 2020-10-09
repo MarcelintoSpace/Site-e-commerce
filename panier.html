@@ -55,7 +55,7 @@
       <div class="container-fluid">
         <div class="row">
           <nav class="col navbar navbar-img navbar-expand-lg navbar-dark">
-            <a class="nav-brand" href="index.html"><img src="front-end/images/logo.png" width="320" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
+            <a class="nav-brand nav-brand-centered" href="index.html"><img src="front-end/images/logo.png" width="320" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
             <div id="navbarContent" class="collapse navbar-collapse">
             </div>
           </nav>
@@ -71,7 +71,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-1-12">
-        <form id="formulaire" name="formulaire" action="confirmation.html" method="post">
+        <form class="formulaire" name="formulaire" action="confirmation.html" method="post">
           <table id="cart" style="visibility:hidden; width:100%">
             <thead>
               <tr>
@@ -86,25 +86,39 @@
           <div id="ssTotal">
             <h4><span id="subTotal"></span></h4>
           </div>
-          <label for="formGroupInput"></label><br>
-          <input type="text" name="nom" placeholder="Nom" id="lastname" class="form-control">
+          <div class="form-group">
+          <label for="formGroupInput"></label>
+          <input type="text" name="nom" placeholder="Nom" id="lastname" class="form-control" required="required">
+         </div>
           <br>
-          <label for="formGroupInput2"></label><br>
-          <input type="text" name="prenom" placeholder="Prénom" id="firstname" class="form-control">
+          <div class="form-group">
+          <label for="formGroupInput2"></label>
+          <input type="text" name="prenom" placeholder="Prénom" id="firstname" class="form-control" required="required">
+          </div>
           <br>
-          <label for="formGroupInput3"></label><br>
-          <input type="text" name="adresse" placeholder="Adresse" id="adresse" class="form-control">
+          <div class="form-group">
+          <label for="formGroupInput3"></label>
+          <input type="text" name="adresse" placeholder="Adresse" id="adresse" class="form-control" required="required">
+          </div>
           <br>
-          <label for="formGroupInput4"></label><br>
+          <div class="form-group">
+          <label for="formGroupInput4"></label>
           <input type="text" name="cp" placeholder="Code postal" id="cp" class="form-control" pattern="[0-9]{5}">
+          </div>
           <br>
-          <label for="formGroupInput5"></label><br>
-          <input type="text" name="ville" placeholder="Ville" id="ville" class="form-control">
+          <div class="form-group">
+          <label for="formGroupInput5"></label>
+          <input type="text" name="ville" placeholder="Ville" id="ville" class="form-control" required="required">
+          </div>
           <br>
-          <label for="formGroupInput6"></label><br>
-          <input type="email" name="email" placeholder="Adresse email" id="email" class="form-control">
+          <div class="form-group">
+          <label for="formGroupInput6"></label>
+          <input type="email" name="email" placeholder="Adresse email" id="email" class="form-control" required="required">
+          </div>
           <br>
+          <div class="form-group">
           <input class="btnSubmit center-block" type="submit" value="Confirmer ma commande">
+          </div>
         </form>
 
       </div>
