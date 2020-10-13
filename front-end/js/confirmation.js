@@ -15,4 +15,4 @@ localStorage.clear();
 function alerteCommande(){
 alert("votre commande est en court de traitement")
   }
-  setTimeout("alerteCommande()",5500);
+  setTimeout("alerteCommande()",8000);

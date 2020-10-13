@@ -234,6 +234,7 @@ td {
   text-decoration: none;
   margin-bottom: 20px;
   border-radius: 5px;
+  font-size: 24px;
 }
 
 .add-to-prod {
@@ -244,12 +245,12 @@ td {
   text-decoration: none;
   margin-bottom: 20px;
   border-radius: 5px;
+  font-size: 24px;
 }
 
 a.add-to-cart {
   color: black;
   text-decoration: none;
-  font-size: 18px;
 }
 
 .img-responsive .centree {
