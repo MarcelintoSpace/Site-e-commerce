@@ -78,16 +78,25 @@ $('form').on("submit", function(e) {
     products:productid
 
   };
+  //envoi des données vers l'API
     request({
     url:"http://localhost:3000/api/teddies/order",
     method:"POST",
     headers: {'Content-Type': 'application/json'},
     body:JSON.stringify(data)
+
+//demande du numéro de commande
   }).then(function (reponse){
-    let commande = JSON.parse(localStorage.getItem('orderId')) ?? [];
-    commande.push(data);
-    window.localStorage.setItem('orderId', JSON.stringify(commande));
-    window.location.href = 'confirmation.html';
+    let retourApi = JSON.parse(reponse);
+    window.localStorage.setItem('orderId', retourApi.orderId);
+
+// LocalStorage pour sous total confirmation
+let totalCommande = JSON.stringify(sumSubTotal);
+localStorage.setItem('sumSubTotal', totalCommande);
+
+// redirection page de confirmation
+    location.href = "confirmation.html";
+
   });
 });
 }

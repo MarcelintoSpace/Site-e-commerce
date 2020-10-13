@@ -18,7 +18,7 @@ request.onload = function() {
   select += "</select>";
 
   //insertion du script dans le HTML
-  document.getElementById("tedArticle").innerHTML += `
+    $('#tedArticle').append( `
                 <div id="teddy">
                 <div class="articleIMG">
                 <img class="img-container" src='${ted.imageUrl}'/>
@@ -29,10 +29,10 @@ request.onload = function() {
                 ${select}</br>
                 <h3>${ted.price/100 + "€"}</h3></br>
                 <a id="btnProduct" class="add-to-prod" href = 'produit.html?id=${ted._id}'><span> Commander </span></a></br>
-                </div> </div></br>`;
+                </div> </div></br>`);
 
   //mise en place du LocalStorage
-  document.getElementById("btnProduct").addEventListener("click", e => {
+  $('#btnProduct').click(e => {
     e.preventDefault();
     let couleurId = document.getElementById("couleur");
     const article = {
@@ -50,3 +50,30 @@ request.onload = function() {
 
 };
 request.send();
+
+// compte a rebourd
+function countdownTimeStart(){
+
+var countDownDate = new Date("Sep 25, 2025 15:00:00").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    // calcul du temps
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // insertion du décompte dans le html
+    $('#timer').html(hours + "h "
+    + minutes + "m " + seconds + "s ");
+
+    if (distance < 0) {
+        clearInterval(x);
+        $('#timer').append("Trop tard ! La Promo de -70% a expiré");
+    }
+}, 1000);
+}

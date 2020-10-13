@@ -1,13 +1,18 @@
 //****page confirmation****
 
-//localStorage getItem
-var order_id = [];
-$(function() {
-  commande = JSON.parse(localStorage.getItem('orderId')) ?? [];
-});
+//localStorage getItem id commande
+let order_id = localStorage.getItem('orderId');
+$('#orderId').text(order_id);
 
-$('#clear').onclick = clear_me;
+//localStorage getItem prix commande
+let totalCommande = localStorage.getItem('sumSubTotal');
+$('#prix').text(totalCommande);
 
-function clear_me() {
-    localStorage.clear();
-}
+// suppression localStorage
+localStorage.clear();
+
+//alerte traitement de Commander
+function alerteCommande(){
+alert("votre commande est en court de traitement")
+  }
+  setTimeout("alerteCommande()",4500);

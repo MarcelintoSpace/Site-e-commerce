@@ -19,7 +19,7 @@ request({
                   });
 
 //insertion dans la page
-    document.getElementsByClassName("flex-container")[0].innerHTML = html;
+    $('.flex-container')[0].innerHTML = html;
   })
   .catch(error => {
     console.log(error);

@@ -36,7 +36,7 @@ a.btn-danger {
 
 /* Barre de navigation */
 a.nav-link {
-font-size: 20px; 
+font-size: 20px;
 }
 
 .img-responsive {
@@ -64,6 +64,26 @@ font-size: 20px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
+/* Timer */
+.promotion {
+  text-align: center;
+}
+
+.decompte div {
+  border-radius: 5px;
+  background-color: black;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.decompte span {
+  color: purple;
+}
+
 /* Articles */
 .flex-container {
   display: flex;
@@ -72,7 +92,7 @@ font-size: 20px;
 }
 
 .img-container {
-  width: 310px;
+  width: 290px;
   height: 200px;
   text-align: center;
 }
@@ -80,7 +100,7 @@ font-size: 20px;
 .flex-container>div {
   background-color: white;
   color: black;
-  width: 320px;
+  width: 300px;
   margin: 10%;
   padding: 5px;
   text-align: center;
@@ -114,7 +134,7 @@ font-size: 20px;
 #tedArticle>div {
   background-color: white;
   color: black;
-  width: 320px;
+  width: 300px;
   margin: 10%;
   padding: 5px;
   text-align: center;
@@ -150,8 +170,8 @@ ul {
 
 /* tableau panier */
 table {
-  margin-left: 20px;
-  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 td button {
@@ -176,6 +196,22 @@ td {
 /* formulaire */
 .form-group {
   margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* confirmation */
+.commande {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: purple;
+  align-items: center;
+}
+
+#clear {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* personalisation du bouton */
@@ -239,6 +275,11 @@ a.add-to-cart {
   transition: 0.3s ease-in-out;
 }
 
+.btn {
+  background-color: purple!important;
+  border-color: purple!important;
+}
+
 .copy {
   text-align: center;
   color: #fff;
@@ -293,6 +334,16 @@ ul.text-white {
 }
 
 /* Affichage responsive */
+@media (min-width: 320px) {
+  .img-responsive {
+      align-items: center;
+    }
+
+  .container-fluid {
+    padding-right: 0px!important;
+  }
+}
+
 @media (min-width: 768px) {
   .cover-container {
     width: 100%;
@@ -305,6 +356,7 @@ ul.text-white {
   .navbar-nav>li {
       float: right;
   }
+
 }
 
 @media (min-width: 992px) {
