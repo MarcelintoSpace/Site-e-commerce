@@ -18,7 +18,7 @@ request.onload = function() {
   select += "</select>";
 
   //insertion du script dans le HTML
-    $('#tedArticle').append( `
+  $('#tedArticle').append(`
                 <div id="teddy">
                 <div class="articleIMG">
                 <img class="img-container" src='${ted.imageUrl}'/>
@@ -52,11 +52,11 @@ request.onload = function() {
 request.send();
 
 // compte a rebourd
-function countdownTimeStart(){
+function countdownTimeStart() {
 
-var countDownDate = new Date("Sep 25, 2025 15:00:00").getTime();
+  var countDownDate = new Date("Sep 25, 2025 15:00:00").getTime();
 
-var x = setInterval(function() {
+  var x = setInterval(function() {
 
     var now = new Date().getTime();
 
@@ -68,12 +68,12 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // insertion du décompte dans le html
-    $('#timer').html(hours + "h "
-    + minutes + "m " + seconds + "s ");
+    $('#timer').html(hours + "h " +
+      minutes + "m " + seconds + "s ");
 
     if (distance < 0) {
-        clearInterval(x);
-        $('#timer').append("Trop tard ! La Promo de -70% a expiré");
+      clearInterval(x);
+      $('#timer').append("Trop tard ! La Promo de -70% a expiré");
     }
-}, 1000);
+  }, 1000);
 }
