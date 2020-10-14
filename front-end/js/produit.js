@@ -68,8 +68,7 @@ function countdownTimeStart() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // insertion du décompte dans le html
-    $('#timer').html(hours + "h " +
-      minutes + "m " + seconds + "s ");
+    $('#timer').html(hours + "h " + minutes + "m " + seconds + "s ");
 
     if (distance < 0) {
       clearInterval(x);
