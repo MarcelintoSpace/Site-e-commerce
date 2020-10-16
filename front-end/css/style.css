@@ -10,6 +10,10 @@ h4 {
   padding: 5px;
 }
 
+h2 {
+  color: #333!important;
+}
+
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
@@ -58,11 +62,16 @@ margin-right: 15px;
   width: 100%;
 }
 
+/* seo */
+.seo {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 /* Corp du texte */
 .card {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
 /* Timer */
