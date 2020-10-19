@@ -13,6 +13,6 @@ localStorage.clear();
 
 //alerte traitement de Commander
 function alerteCommande(){
-alert("votre commande est en court de traitement")
+alert("votre commande est en cours de traitement")
   }
   setTimeout("alerteCommande()",8000);
