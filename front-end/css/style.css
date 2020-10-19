@@ -26,6 +26,10 @@ hr {
   margin: 18px 0;
 }
 
+em {
+  font-style: normal;
+}
+
 a,
 a:focus,
 a:hover {
