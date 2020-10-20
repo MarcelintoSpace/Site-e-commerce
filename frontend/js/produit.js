@@ -34,7 +34,7 @@ request.onload = function() {
   //mise en place du LocalStorage
   $('#btnProduct').click(e => {
     e.preventDefault();
-    let couleurId = document.getElementById("couleur");
+    let couleurId = $('#couleur');
     const article = {
       id: ted._id,
       name: ted.name,

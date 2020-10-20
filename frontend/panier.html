@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Titre & Description -->
+  <meta name="description" content="Craquez pour des nounours en peluche, geante ou pas. Nos ours en peluche sont made in france. Alors pour vos idées cadeau made france, comme un doudou ou un nin-nin, un achat d'ours en peluche">
+  <title>Orinoco.fr | des ours en peluche Made in France | Panier</title>
+
+  <!-- Balise Cannonique -->
+  <link rel="canonical" href="https://marcelintospace.github.io/P5_Oricono/panier">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173575553-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173575553-1');
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- glyphicon -->
+  <link rel="stylesheet" href="css/glyphicon.css">
+
+  <!-- IE10 CSS hack pour windows 8 Surface -->
+  <link href="css/ie10-viewport.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Adaptation JS pour ie -->
+  <script src="js/struc/ie-emulation.js"></script>
+
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <!-- Haut de page -->
+  <header>
+    <div class="bg-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="col navbar navbar-img navbar-expand-lg navbar-dark">
+            <a class="nav-brand nav-brand-centered" href="index.html"><img src="images/logo.png" width="300" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
+            <div id="navbarContent" class="collapse navbar-collapse">
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--corp du site -->
+  <div class="container">
+    <h2>| Panier |</h2>
+    <!-- Produits -->
+    <p id="messPanier"> </p>
+    <!-- Formulaire -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1-12">
+          <form class="formulaire" name="formulaire" action="confirmation.html" method="post">
+            <table id="cart" style="visibility:hidden; width:100%">
+              <thead>
+                <tr>
+                  <th scope="col">Article</th>
+                  <th scope="col">Couleur</th>
+                  <th scope="col">Prix</th>
+                </tr>
+              </thead>
+              <tbody id="cartBody">
+              </tbody>
+            </table>
+            <div id="ssTotal">
+              <h4><span id="subTotal"></span></h4>
+            </div>
+            <div class="form-group">
+              <label for="lastname"></label>
+              <input type="text" name="nom" placeholder="Nom" id="lastname" class="form-control" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="firstname"></label>
+              <input type="text" name="prenom" placeholder="Prénom" id="firstname" class="form-control" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="adresse"></label>
+              <input type="text" name="adresse" placeholder="Adresse" id="adresse" class="form-control" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="cp"></label>
+              <input type="text" name="cp" placeholder="Code postal" id="cp" class="form-control" pattern="[0-9]{5}">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="ville"></label>
+              <input type="text" name="ville" placeholder="Ville" id="ville" class="form-control" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="email"></label>
+              <input type="email" name="email" placeholder="Adresse email" id="email" class="form-control" required="required">
+            </div>
+            <br>
+            <div class="form-group">
+              <input class="btnSubmit center-block" type="submit" value="Valider ma commande">
+            </div>
+          </form>
+
+        </div>
+        <div class="messageErreur">
+          <!-- message d'erreur -->
+          <p style="color: red;" id="erreur"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- seo -->
+    <div class="card">
+      <div class="seo">
+        <h5>Je peux affirmer avec <em>confiance</em> que notre engagement envers la <em>qualité</em> de nos <strong>ours en peluche</strong>, l'artisanat et les pratiques <em>éthiques</em> pour la fabrication de nos <strong>peluches</strong> sera
+          notre plus grand atout pour nos clients.</h5>
+      </div>
+    </div>
+  </div>
+  <!-- Bas de page -->
+  <hr>
+  <!-- Footer -->
+  <footer class="bg-dark">
+    <div class="company-links">
+      <h1 class="text-white">ORINOCO</h1>
+      <ul class="text-white">
+        <li><a href="#">Mentions Légales</a></li>
+        <li><a href="#">Etre Affilié</a></li>
+        <li><a href="mailto:benjamin@orinoco.com?subject=feedback">Contacts</a></li>
+        <li><a href="#">Aide</a></li>
+      </ul>
+    </div>
+    <div class="paiement-links">
+      <h4 class="text-white">PAIEMENT</h4>
+      <i class="fab fa-cc-apple-pay fa-3x"></i>
+      <i class="fab fa-cc-mastercard fa-3x"></i>
+      <i class="fab fa-cc-paypal fa-3x"></i>
+      <i class="fab fa-cc-stripe fa-3x"></i>
+      <i class="fab fa-cc-visa fa-3x"></i>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- Coppyright -->
+  <div class="copy">
+    <h5>Site fait avec ❤️ par <a href="http://benniget.com">Benniget</a></h5>
+  </div>
+
+  <!-- JavaScript Bootstrap & API -->
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/struc/jquery-3.3.1.min.js"><\/script>')
+  </script>
+  <script src="js/struc/bootstrap.min.js"></script>
+  <script src="js/struc/bootstrap.js"></script>
+  <script src="js/struc/popper.min.js"></script>
+  <!-- IE10 viewport hack pour bug windows 8 Surface -->
+  <script src="js/struc/ie10-viewport.js"></script>
+  <!-- JS API -->
+  <script src="js/ajax.js"></script>
+  <!-- JS Panier -->
+  <script src="js/panier.js"></script>
+  <!-- Jquery Fontawesome -->
+  <script src="https://use.fontawesome.com/releases/v5.15.0/js/all.js" data-auto-replace-svg="nest"></script>
+</body>

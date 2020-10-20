@@ -11,10 +11,10 @@
 
   <!-- Titre & Description -->
   <meta name="description" content="Craquez pour des nounours en peluche, geante ou pas. Nos ours en peluche sont made in france. Alors pour vos idées cadeau made france, comme un doudou ou un nin-nin, un achat d'ours en peluche">
-  <title>Orinoco.fr | des ours en peluche Made in France | Confirmation</title>
+  <title>Orinoco.fr | des ours en peluche Made in France  | Oursons</title>
 
   <!-- Balise Cannonique -->
-  <link rel="canonical" href="https://marcelintospace.github.io/P5_Oricono/confirmation">
+  <link rel="canonical" href="https://marcelintospace.github.io/P5_Oricono/produit">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173575553-1"></script>
@@ -30,33 +30,41 @@
   </script>
 
   <!-- Bootstrap CSS -->
-  <link href="front-end/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- glyphicon -->
-  <link rel="stylesheet" href="front-end/css/glyphicon.css">
+  <link rel="stylesheet" href="css/glyphicon.css">
 
   <!-- IE10 CSS hack pour windows 8 Surface -->
-  <link href="front-end/css/ie10-viewport.css" rel="stylesheet">
+  <link href="css/ie10-viewport.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link href="front-end/css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- Adaptation JS pour ie -->
-  <script src="front-end/js/struc/ie-emulation.js"></script>
+  <script src="js/struc/ie-emulation.js"></script>
 
   <!-- Fontawesome CSS -->
-  <link rel="stylesheet" href="front-end/css/all.css">
+  <link rel="stylesheet" href="css/all.css">
 </head>
 
-<body>
+<body onload="countdownTimeStart()">
   <!-- Haut de page -->
   <header>
     <div class="bg-dark">
       <div class="container-fluid">
         <div class="row">
           <nav class="col navbar navbar-expand-lg navbar-dark">
-            <a class="nav-brand" href="index.html"><img src="front-end/images/logo.png" width="300" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
-            <div id="navbarContent" class="collapse navbar-collapse">
+            <a class="nav-brand" href="index.html"><img src="images/logo.png" width="300" height="60" alt="Logo du site e-commerce Oricono.fr" class="img-rounded pull-center img-responsive center-block"></a>
+            <div id="navbarContent" class="navbar-brand navbar-brand-centered">
+              <ul class="navbar-nav pull-right">
+                <li class="nav-item active">
+                <li class="nav-item">
+                  <div class="lienPanier">
+                    <a class="nav-link" href="panier.html"><i class="fas fa-shopping-cart fa-m"></i> Panier</a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
@@ -64,31 +72,35 @@
     </div>
   </header>
   <!--corp du site -->
-
+  <div class="container">
+<h2>| Produits |</h2>
   <!-- produits -->
-  <div class="card">
-    <div class="commande">
-      <div class="numCommande">
-        <h4>Votre Numéro de commande est le <span id="orderId"></span></h4>
-      </div>
-      <div class="prixCommande">
-        <h4>Le montant total est de <span id="prix"></span>€</h4>
-      </div>
-      <div class="merci">
-        <h4>Orinoco, vous remercie pour votre commande !</h4>
-      </div>
+  <div class="promotion">
+    <h3>Profitez de la <strong>Promotion</strong> sur vos <em>Oursons préférés</em>, -70%</h3>
+  </div>
+  <div class="decompte">
+    <div>
+      <span id="timer"></span>
     </div>
   </div>
   <div class="card">
-    <a href="index.html" id="clear" class="btn btn-lg">Retour à l'accueil</a>
+    <div id="tedArticle">
+    </div>
   </div>
 
+  <!-- seo -->
+  <div class="card">
+    <div class="seo">
+      <h4>Nos <strong>oursons durables</strong> sont fabriqués à partir de <em>matériaux naturels</em> 🌳, sans matériaux synthétiques et fabriqués en petits lots pour éviter le gaspillage.</h4>
+    </div>
+  </div>
+</div>
   <!-- Bas de page -->
   <hr>
   <!-- Footer -->
   <footer class="bg-dark">
     <div class="company-links">
-      <h4 class="text-white">ORINOCO</h4>
+      <h1 class="text-white">ORINOCO</h1>
       <ul class="text-white">
         <li><a href="#">Mentions Légales</a></li>
         <li><a href="#">Etre Affilié</a></li>
@@ -116,16 +128,17 @@
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
   <script>
-    window.jQuery || document.write('<script src="front-end/js/struc/jquery-3.3.1.min.js"><\/script>')
+    window.jQuery || document.write('<script src="js/struc/jquery-3.3.1.min.js"><\/script>')
   </script>
-  <!-- JS Bootstrap -->
-  <script src="front-end/js/struc/bootstrap.min.js"></script>
-  <script src="front-end/js/struc/bootstrap.js"></script>
-  <script src="front-end/js/struc/popper.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="js/struc/bootstrap.min.js"></script>
+  <script src="js/struc/bootstrap.js"></script>
+  <script src="js/struc/popper.min.js"></script>
   <!-- IE10 viewport hack pour bug windows 8 Surface -->
-  <script src="front-end/js/struc/ie10-viewport.js"></script>
-  <!-- JS API -->
-  <script src="front-end/js/ajax.js"></script>
-  <!-- JS Confirmation-->
-  <script src="front-end/js/confirmation.js"></script>
+  <script src="js/struc/ie10-viewport.js"></script>
+  <!-- JS Produit -->
+  <script src="js/produit.js"></script>
+  <!-- JS Panier -->
+  <script src="js/panier.js"></script>
 </body>
