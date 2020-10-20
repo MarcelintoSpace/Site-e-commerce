@@ -54,7 +54,7 @@ request.send();
 // compte a rebourd
 function countdownTimeStart() {
 
-  var countDownDate = new Date("Sep 25, 2025 15:00:00").getTime();
+  var countDownDate = new Date("Sep 25, 2025 17:00:00").getTime();
 
   var x = setInterval(function() {
 
