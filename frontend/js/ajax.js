@@ -1,4 +1,3 @@
-//appel de l'API
 let request = obj => {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();

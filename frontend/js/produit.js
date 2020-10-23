@@ -28,7 +28,7 @@ request.onload = function() {
                 <h4>${ted.description}</h4> </br>
                 ${select}</br>
                 <h3>${ted.price/100 + "€"}</h3></br>
-                <a id="btnProduct" class="add-to-prod" href = 'produit.html?id=${ted._id}'><span> Commander </span></a></br>
+                <a id="btnProduct" class="add-to-prod" href = 'ourson.html?id=${ted._id}'><span> Commander </span></a></br>
                 </div> </div></br>`);
 
   //mise en place du LocalStorage
@@ -38,7 +38,7 @@ request.onload = function() {
     const article = {
       id: ted._id,
       name: ted.name,
-      color: couleurId.options[couleurId.selectedIndex].text,
+      color: couleurId.selectedindex += [couleurId].text,
       price: ted.price / 100
     }
 

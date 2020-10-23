@@ -8,7 +8,7 @@ $(function() {
 function addToCart() {
   var price = $("#price").val();
   var name = $("#name").text();
-  var color = $("#colors option:selected").text();
+  var color = $("#colors").text();
 
 
   // création de l'object javascript
@@ -46,6 +46,7 @@ function showCart() {
     return;
   }
 
+// sous-total
   $("#cart").css("visibility", "visible");
   $("#cartBody").empty();
     let sumSubTotal = 0;

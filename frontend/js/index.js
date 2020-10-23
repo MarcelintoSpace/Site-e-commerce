@@ -14,7 +14,7 @@ request({
                 <h3>${ted.name}</h3></br>
                 <h4>${ted.description}</h4> </br>
                 <h3>${ted.price/100 + "€"}</h3></br>
-                <a id="myBtn" class="add-to-cart" href = 'produit.html?id=${ted._id}'><span>Plus d'infos !</span></a></br>
+                <a id="myBtn" class="add-to-cart" href = 'ourson.html?id=${ted._id}'><span>Plus d'infos !</span></a></br>
                 </div> </br>`;
                   });
 
