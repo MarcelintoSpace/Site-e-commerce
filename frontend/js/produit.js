@@ -72,7 +72,7 @@ function countdownTimeStart() {
 
     if (distance < 0) {
       clearInterval(x);
-      $('#timer').append("Trop tard ! La Promo de -70% a expiré");
+      $('#timer').append("Trop tard, la Promo de -70% a expiré !");
     }
   }, 1000);
 }
