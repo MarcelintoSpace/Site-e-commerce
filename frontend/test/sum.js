@@ -21,4 +21,4 @@ let request = obj => {
   });
 };
 
-module.exports = sum;
+module.exports = request;

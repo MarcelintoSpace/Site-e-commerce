@@ -1,4 +1,4 @@
-const sum = require('./sum');
+const request = require('./sum');
 
 let open, send, onload, onerror;
 
