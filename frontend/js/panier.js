@@ -46,7 +46,7 @@ function showCart() {
     return;
   }
 
-// sous-total
+// mise en forme du tableau des articles
   $("#cart").css("visibility", "visible");
   $("#cartBody").empty();
     let sumSubTotal = 0;
@@ -54,9 +54,10 @@ function showCart() {
   for (var i in panier) {
     console.log(i, panier);
     var item = panier[i];
-    var row = "<tr><td>" + item.name + "</td><td>" + item.color + "</td><td id='price'>" +
+    var row = "<tr><caption>Votre Commande</caption><td>" + item.name + "</td><td>" + item.color + "</td><td id='price'>" +
       item.price + "€</td><td>" +
       "<button onclick='deleteItem(" + i + ")'><span><i class='far fa-trash-alt fa-lg'></i></span></button></td></tr>";
+ // sous-total
     $("#cartBody").append(row);
     sumSubTotal = sumSubTotal + item.price;
     productid.push(item.id);

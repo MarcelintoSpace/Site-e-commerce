@@ -20,3 +20,5 @@ let request = obj => {
     xhr.send(obj.body);
   });
 };
+
+module.exports = ajax;

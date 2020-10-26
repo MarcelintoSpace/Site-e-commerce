@@ -34,11 +34,11 @@ request.onload = function() {
   //mise en place du LocalStorage
   $('#btnProduct').click(e => {
     e.preventDefault();
-    let couleurId = $('#couleur');
+    let couleurId = document.getElementById('couleur');
     const article = {
       id: ted._id,
       name: ted.name,
-      color: couleurId.selectedindex += [couleurId].text,
+      color: couleurId.options[couleurId.selectedIndex].text,
       price: ted.price / 100
     }
 
