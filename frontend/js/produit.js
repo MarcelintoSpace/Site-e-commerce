@@ -2,22 +2,23 @@
 let params = new URLSearchParams(document.location.search);
 let idProduit = params.get("id");
 
-// appel des données
+// appel Ajax
 var request = new XMLHttpRequest();
+//récupération dans l'API du produit grâce à l'url + id
 request.open('GET', 'http://localhost:3000/api/teddies/' + idProduit);
 
 //mise en forme des données
 request.onload = function() {
   var ted = JSON.parse(request.response);
 
-  // sélection des couleurs
+  // mise en forme html du sélecteur de couleurs
   let select = "<select id='couleur'>";
   ted.colors.forEach((item, i) => {
     select += "<option>" + item + "</option>";
   });
   select += "</select>";
 
-  //insertion du script dans le HTML
+  //insertion du  HTML
   $('#tedArticle').append(`
                 <div id="teddy">
                 <div class="articleIMG">
@@ -31,17 +32,18 @@ request.onload = function() {
                 <a id="btnProduct" class="add-to-prod" href = 'ourson.html?id=${ted._id}'><span> Commander </span></a></br>
                 </div> </div></br>`);
 
-  //mise en place du LocalStorage
+  //enregistrement dans le LocalStorage des données du panier
   $('#btnProduct').click(e => {
     e.preventDefault();
     let couleur = $('#couleur option:selected').text();
     const article = {
+      //données du panier
       id: ted._id,
       name: ted.name,
       color: couleur,
       price: ted.price / 100
     }
-
+    
     let panier = JSON.parse(localStorage.getItem('panier')) ?? [];
     panier.push(article);
     window.localStorage.setItem('panier', JSON.stringify(panier));

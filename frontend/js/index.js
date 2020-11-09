@@ -1,11 +1,13 @@
-//appel des données
+//appel de l'url de l'API
 request({
     url: "http://localhost:3000/api/teddies"
   })
 
 //mise en forme
   .then(data => {
+    //transformation du JSON en objet
     let teddies = JSON.parse(data);
+    //mise en forme html
     let html = "";
     teddies.forEach(ted => {
       html += `

@@ -1,5 +1,3 @@
-//****page confirmation****
-
 //localStorage getItem id commande
 let order_id = localStorage.getItem('orderId');
 $('#orderId').text(order_id);

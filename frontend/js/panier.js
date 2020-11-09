@@ -1,22 +1,24 @@
-// création du panier
+// création du panier sous forme de tableau
 var panier = [];
 $(function() {
   panier = JSON.parse(localStorage.getItem('panier')) ?? [];
   showCart();
 });
 
+//définition des éléments du panier
 function addToCart() {
   var price = $("#price").val();
   var name = $("#name").text();
   var color = $("#colors").text();
 
 
-  // création de l'object javascript
+  // création de l'object javascript item
   var item = {
     Product: name,
     Price: price,
     Color: colors
   };
+  //ajout du produit au panier
   panier.push(item);
   saveCart();
   showCart();
@@ -32,28 +34,34 @@ function deleteItem(index) {
 
 function saveCart() {
   if (window.localStorage) {
+  //récupération du localStorage
     localStorage.panier = JSON.stringify(panier);
   }
 }
 
-// panier vide
+// function pour un panier vide
 function showCart() {
+  //si le panier est égale à 0
   if (panier.length == 0) {
+    //mise forme css annulé
     $("#cart").css("display", "none");
     $('#ssTotal').css("display", "none");
-    $('#messPanier').html("Votre panier est vide");
     $('.formulaire').css("display", "none");
+    //insertion message dans le html
+    $('#messPanier').html("Votre panier est vide");
     return;
   }
 
 // mise en forme du tableau des articles
   $("#cart").css("visibility", "visible");
   $("#cartBody").empty();
+  //si le panier est vide, total à 0
     let sumSubTotal = 0;
     let productid = [];
   for (var i in panier) {
     console.log(i, panier);
     var item = panier[i];
+    //structure html du tableau récapitulatif des arcticles
     var row = "<tr><caption>Votre Commande</caption><td>" + item.name + "</td><td>" + item.color + "</td><td id='price'>" +
       item.price + "€</td><td>" +
       "<button onclick='deleteItem(" + i + ")'><span><i class='far fa-trash-alt fa-lg'></i></span></button></td></tr>";
@@ -68,6 +76,7 @@ function showCart() {
 // le formulaire et le panier
 var form = document.querySelector("form");
 $('form').on("submit", function(e) {
+  //mise en attente que toutes les données soit prisent en comptes
   e.preventDefault();
   let data = {
     contact:{
